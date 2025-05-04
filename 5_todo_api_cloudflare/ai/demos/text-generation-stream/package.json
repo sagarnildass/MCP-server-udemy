@@ -1,0 +1,33 @@
+{
+	"name": "text-generation-stream",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "npm run build && vite preview",
+		"deploy": "npm run build && wrangler deploy",
+		"format": "biome format --write",
+		"test": "vitest",
+		"test:ci": "vitest --watch=false",
+		"cf-typegen": "wrangler types",
+		"lint": "biome lint --error-on-warnings",
+		"lint:fix": "biome lint --fix",
+		"type-check": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^1.0.0",
+		"@biomejs/biome": "^1.8.2",
+		"@cloudflare/vitest-pool-workers": "^0.7.5",
+		"typescript": "^5.5.2",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.2.0"
+	},
+	"dependencies": {
+		"agents-sdk": "^0.0.27",
+		"ai": "^4.1.39",
+		"hono": "^4.7.1",
+		"workers-ai-provider": "^0.3.0",
+		"zod": "^3.24.2"
+	}
+}

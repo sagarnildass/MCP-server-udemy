@@ -1,0 +1,49 @@
+{
+	"name": "ui-worker",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "npm run build && vite preview",
+		"deploy": "npm run build && wrangler deploy",
+		"format": "biome format --write",
+		"lint": "biome lint --error-on-warnings",
+		"lint:fix": "biome lint --fix",
+		"test": "vitest --watch=false",
+		"test:ci": "vitest --watch=false",
+		"cf-typegen": "wrangler types",
+		"type-check": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.2",
+		"@cloudflare/vite-plugin": "^0.1.5",
+		"@cloudflare/vitest-pool-workers": "^0.7.5",
+		"@types/react": "^19.0.8",
+		"@types/react-dom": "^19.0.3",
+		"@vitejs/plugin-react": "^4.3.4",
+		"postcss": "^8.5.2",
+		"postcss-preset-mantine": "^1.17.0",
+		"postcss-simple-vars": "^7.0.1",
+		"typescript": "^5.5.2",
+		"vite": "^6.2.4",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.2.0"
+	},
+	"dependencies": {
+		"@ai-sdk/react": "^1.2.8",
+		"@mantine/charts": "^7.16.3",
+		"@mantine/code-highlight": "^7.16.3",
+		"@mantine/core": "^7.16.3",
+		"@mantine/dates": "^7.16.3",
+		"@mantine/form": "^7.16.3",
+		"@mantine/hooks": "^7.16.3",
+		"@mantine/modals": "^7.16.3",
+		"@mantine/notifications": "^7.16.3",
+		"ai": "^4.1.39",
+		"hono": "^4.7.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"zod": "^3.24.2"
+	}
+}

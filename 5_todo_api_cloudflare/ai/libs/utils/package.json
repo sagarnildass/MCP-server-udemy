@@ -1,0 +1,9 @@
+{
+	"name": "utils",
+	"private": true,
+	"scripts": {
+		"format": "biome format --write",
+		"test": "vitest",
+		"test:ci": "vitest --watch=false"
+	}
+}
